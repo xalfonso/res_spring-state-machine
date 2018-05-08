@@ -39,19 +39,19 @@ public class ProcessDefinitionConf extends StateMachineConfigurerAdapter<String,
         states.withStates()
                 .initial("A")
                 .end("C")
-                .states(new HashSet<String>(Arrays.asList("A", "B", "C")));
+                .states(new HashSet<>(Arrays.asList("A", "B", "C")));
     }
 
     @Override
     public void configure(StateMachineTransitionConfigurer<String, String> transitions) throws Exception {
-       transitions
-               .withExternal()
-               .source("A").target("B").event("E1").action(aToBAction).guard(aToBGuard)
-               .and()
-               .withExternal()
-               .source("B").target("C").event("E2")
-               .and()
-               .withExternal()
-               .source("B").target("C").event("E3");
+        transitions
+                .withExternal()
+                .source("A").target("B").event("E1").action(aToBAction).guard(aToBGuard)
+                .and()
+                .withExternal()
+                .source("B").target("C").event("E2")
+                .and()
+                .withExternal()
+                .source("B").target("C").event("E3");
     }
 }

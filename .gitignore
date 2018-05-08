@@ -1,0 +1,6 @@
+*.class
+*/target/*
+ssm-caos/.idea/*
+*.iml
+.gradle
+build/

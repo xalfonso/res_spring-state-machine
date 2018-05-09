@@ -21,7 +21,7 @@ public class Guards {
             @Override
             public boolean evaluate(StateContext<String, String> context) {
                 LOG.info("Ejecutando la guarda en la transicion del estado A a B");
-                return false;
+                return true;
             }
         };
     }
